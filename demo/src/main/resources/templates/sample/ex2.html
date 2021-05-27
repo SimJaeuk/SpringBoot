@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .target {
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+
+
+<ul>
+    <li th:each="dto, state : ${list}" th:class="${dto.sno % 5 == 0}?'target'"th:text="${dto}">
+        [[${dto}]]
+    </li>
+</ul>
+</body>
+</html>
+
+<!-- <li>(List item) 태그 내에서 dto 변수를 만들어서 사용
+Model로 전달받은 데이터는 ${list}를 이용해서 처리한다.
+태그 안쪽에 인라인 표현식으로 별도의 태그 속성으로
+지정하지 않고 사용하고자 할 때 유용하게 쓸 수 있다.
+-->
