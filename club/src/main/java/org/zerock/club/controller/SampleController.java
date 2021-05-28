@@ -26,4 +26,9 @@ public class SampleController {
     public void exAdmin(){
         log.info("exAdmin........");
     }
+
+    @GetMapping({"/exLayout1","/exLayout2","/exLayout3","/exLayout4"})
+    public void exLay1(){
+        log.info("exlayout.......");
+    }
 }
